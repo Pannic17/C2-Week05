@@ -1,4 +1,4 @@
-# Image Hash Readme
+# Python Image Hashing and Encryption Script
 
 This script implements an image hashing and encryption algorithm using the Marr-Hildreth and Block Mean Hashing algorithms from the OpenCV library. The script reads an image, generates a hash using the Marr-Hildreth algorithm, and then uses this hash to hide a message within the image. The Block Mean Hash algorithm is then used to adjust the pixel values to create a "glitch" effect. The main purpose of the script is to perform the following operations:
 
