@@ -227,6 +227,6 @@ if __name__ == '__main__':
     # decimal2hex(rv_hash.compute(test)[0])
     # p_hash = cv2.img_hash.PHash_create()
     # decimal2hex(p_hash.compute(test)[0])
-    hash_glitch("Test8.png")
-
+    hash_glitch("Test6.png")
+    # hash_hide("Test6.png")
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
