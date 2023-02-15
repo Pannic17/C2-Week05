@@ -1,6 +1,6 @@
-# Image Hash Readme
+# Python Image Hashing and Encryption Script
 
-This script contains functions to perform image hash operations using the OpenCV library. The script uses the following hash functions: MarrHildrethHash, BlockMeanHash, and MDC (Mean Difference Central Moments). The main purpose of the script is to perform the following operations:
+This script implements an image hashing and encryption algorithm using the Marr-Hildreth and Block Mean Hashing algorithms from the OpenCV library. The script reads an image, generates a hash using the Marr-Hildreth algorithm, and then uses this hash to hide a message within the image. The Block Mean Hash algorithm is then used to adjust the pixel values to create a "glitch" effect. The major implementation of the script is to perform the following operations:
 
 - Hash an image using the MarrHildrethHash and BlockMeanHash functions.
 - Convert the hash values to hexadecimal and binary representations.
