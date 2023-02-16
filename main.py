@@ -98,19 +98,19 @@ def get_ascii(char):
     return 2 * ord(char)
 
 
-def hash_hide(path):
+def hash_hide(path, text):
     test = cv2.imread(path)
     test = resize(test)
     mh_hash = cv2.img_hash.MarrHildrethHash_create()
     hash_array = mh_hash.compute(test)[0]
     decimal2hex(hash_array)
     # convert_hash2rgb(hash_array)
-    image = replace_pixel_hide(test, "no body, not even the rain, has such small hands", hash_array)
+    image = replace_pixel_hide(test, text, hash_array)
     cv2.imshow("CRYPT", image)
     cv2.waitKey(0)
 
 
-def hash_glitch(path):
+def hash_glitch(path, text):
     test = cv2.imread(path)
 
     # used as color
@@ -142,7 +142,7 @@ def hash_glitch(path):
 
     image = resize(test)
 
-    poem = "only something in me understands, the voice of your eyes is deeper than all roses"
+    poem = text
 
     count = 0
     x = hash_string_to_number(poem)
@@ -216,6 +216,9 @@ def hash_string_to_number(string):
 if __name__ == '__main__':
     # hash_hide("Test8.png")
     test = cv2.imread("Test8.png")
+
+    eec_1 = "no body, not even the rain, has such small hands"
+    eec_2 = "only something in me understands, the voice of your eyes is deeper than all roses"
     # av_hash = cv2.img_hash.AverageHash_create()
     # decimal2hex(av_hash.compute(test)[0])
     # bm_hash = cv2.img_hash.BlockMeanHash_create()
@@ -227,6 +230,5 @@ if __name__ == '__main__':
     # decimal2hex(rv_hash.compute(test)[0])
     # p_hash = cv2.img_hash.PHash_create()
     # decimal2hex(p_hash.compute(test)[0])
-    hash_glitch("Test6.png")
-    # hash_hide("Test6.png")
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # hash_glitch("Test6.png", eec_2)
+    hash_hide("Test9.png", eec_1)
