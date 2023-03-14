@@ -217,6 +217,8 @@ if __name__ == '__main__':
     # hash_hide("Test8.png")
     test = cv2.imread("Test8.png")
 
+    cv2.CascadeClassifier()
+
     eec_1 = "no body, not even the rain, has such small hands"
     eec_2 = "only something in me understands, the voice of your eyes is deeper than all roses"
     # av_hash = cv2.img_hash.AverageHash_create()
